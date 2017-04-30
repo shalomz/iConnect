@@ -3,7 +3,7 @@ from django.conf import settings
 
 
 class Post(models.Model):
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, releated_name='posts_created')
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='posts_created')
     content = models.CharField(max_length=140)
     created_time = models.DateTimeField(auto_now_add=True)
     edited = models.DateTimeField(auto_now=True)
